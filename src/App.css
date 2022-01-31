@@ -1,38 +1,50 @@
-.App {
-  text-align: center;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  font-family: 'DM Sans', sans-serif;
 }
+.login-background{
+  background: #23292F;
+}
+.card{
+  background: linear-gradient(180deg, rgb(64,70,74) 0%, rgb(42,48,54) 100%);
+  backdrop-filter: blur(40px);
+  
+  border-top: 1px solid #777C80;
+  border-left: 1px solid #777C80;
+  border-bottom: 1px solid #777C80;
+  border-right: 1px solid #777c803a;
+  /* border-image-source: linear-gradient(162.46deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 61.56%, rgba(255, 255, 255, 0.5) 100%); */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+/* Note: backdrop-filter has minimal browser support */
+
+}
+.text-grey{
+  color: #fefefec9;
+}
+.form-control{
+  background: #62666A;
+  border: 1px solid #777C80;
+  margin: 12px 0;
+  width: 100%;
+  border-radius: 4px;
+  padding: 10px 0 10px 15px;
+  color: #DADADB;
+  font-size: 0.9em;
+  outline: none;
+}
+@media(min-width:768px){
+  .form-control{
+    width: 310px;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.form-control::placeholder{
+  color: #DADADB;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.auth-button{
+  background: white;
+  color: #23292F;
 }
